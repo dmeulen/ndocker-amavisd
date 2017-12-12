@@ -22,7 +22,7 @@ clean:
 shell:
 	docker run \
 		-it \
-		$(NS)/$(REPO) \
+		$(NS)/$(REPO):$(VERSION) \
 		sh
 
 run:
