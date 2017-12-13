@@ -21,7 +21,11 @@ clean:
 
 shell:
 	docker run \
+		--net=host \
 		-it \
+		$(PORTS) \
+		$(VOLUMES) \
+		$(ENV) \
 		$(NS)/$(REPO):$(VERSION) \
 		sh
 
