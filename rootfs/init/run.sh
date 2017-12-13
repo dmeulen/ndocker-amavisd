@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+patch /usr/sbin/amavisd /etc/ndocker/clean_stdout_log.patch
+
 busybox syslogd -n -O /dev/stdout &
 bbchild=$!
 

@@ -37,8 +37,8 @@ $pid_file = "/run/amavis/pid";   # -P
 
 $log_level = 2;              # verbosity 0..5, -d
 $log_recip_templ = undef;    # disable by-recipient level-0 log entries
-$do_syslog = 1;              # log via syslogd (preferred)
-$syslog_facility = 'mail';   # Syslog facility as a string
+$do_syslog = 0;              # log via syslogd (preferred)
+#$syslog_facility = 'mail';   # Syslog facility as a string
            # e.g.: mail, daemon, user, local0, ... local7
 $logline_maxlen = ( 32*1024 ) - 50;
 $log_templ = <<'EOD';

@@ -1,0 +1,11 @@
+--- /usr/sbin/amavisd
++++ /root/amavisd
+@@ -2560,7 +2560,7 @@
+       $prefix = "<$prio>";  # sd-daemon(3), SyslogLevelPrefix=true
+     }
+     # avoid multiple calls to write(2), join the string first!
+-    my $s = $prefix . $am_id . $alert_mark . $errmsg . "\n";
++    my $s = $errmsg . "\n";
+     #
+     # IEEE Std 1003.1, 2013: Write requests to a pipe or FIFO shall be handled
+     # in the same way as a regular file with the following exceptions: [...]
