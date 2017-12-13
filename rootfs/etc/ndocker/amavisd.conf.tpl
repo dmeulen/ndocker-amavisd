@@ -40,6 +40,11 @@ $log_recip_templ = undef;    # disable by-recipient level-0 log entries
 $do_syslog = 1;              # log via syslogd (preferred)
 $syslog_facility = 'mail';   # Syslog facility as a string
            # e.g.: mail, daemon, user, local0, ... local7
+$logline_maxlen = ( 32*1024 ) - 50;
+$log_templ = <<'EOD';
+[:report_json]
+EOD
+#>>
 
 $enable_db = 1;              # enable use of BerkeleyDB/libdb (SNMP and nanny)
 # $enable_zmq = 1;           # enable use of ZeroMQ (SNMP and nanny)
