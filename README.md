@@ -13,4 +13,4 @@ Env var | Description | Notes
 AMAVIS_MYDOMAIN | The domain amavis is using |
 AMAVIS_MYHOSTNAME | The hostname reported by amavisd |
 AMAVIS_ACL | Space separated list of cidr addresses that are allowed to connect to amavis |
-POSTFIX_RETURN | Method to forward back to postfix | e.g. : "smtp:[192.168.1.100]:10025"
+POSTFIX_RETURN | Method to forward back to postfix | e.g. : `"smtp:[192.168.1.100]:10025"`
