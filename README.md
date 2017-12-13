@@ -5,7 +5,7 @@ This contains a slightly patched version of amavisd that produces clean logs.
 It has JSON formatted logging enabled and ready for structured logging.
 However, amavis is a strange beast. Most log lines are not formatted in JSON, but it will produce a single line that contains all fields needed in JSON format.
 
-It will read user preferences from consul if "amavis/user_prefs" is available in the K/V store in consul and will restart amavisd if those preferences are changed.
+It will read spamassassin user preferences from consul if "amavis/user_prefs" is available in the K/V store in consul and will restart amavisd if those preferences are changed. This can be used to change scores or whitelist email addresses.
 
 # ENVIRONMENT VARIABLES
 Env var | Description | Notes
