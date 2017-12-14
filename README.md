@@ -1,7 +1,7 @@
 # ndocker-amavisd
 An amavisd docker image for use with nomad
 
-This contains a slightly patched version of amavisd that produces clean logs.
+This image contains a slightly patched version of amavisd that produces clean logs.
 It has JSON formatted logging enabled and ready for structured logging.
 However, amavis is a strange beast. Most log lines are not formatted in JSON, but it will produce a single line that contains all fields needed in JSON format.
 
