@@ -2,6 +2,8 @@
 
 patch /usr/sbin/amavisd /etc/ndocker/clean_stdout_log.patch
 
+sa_update -v
+
 busybox syslogd -n -O /dev/stdout &
 bbchild=$!
 

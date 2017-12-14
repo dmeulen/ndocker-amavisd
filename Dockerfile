@@ -29,7 +29,6 @@ RUN \
   mkdir -p /var/spool/amavis/db && \
   mkdir /run/amavis && \
   chown -R amavis:amavis /var/spool/amavis /run/amavis && \
-  sa-update && \
   apk --purge del ${APK_ADD} && \
   rm -rf \
     /tmp/* \
