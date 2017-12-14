@@ -1,0 +1,2 @@
+- [  ] Consul should be configurable in consul template template
+- [  ] Run sa-update periodically

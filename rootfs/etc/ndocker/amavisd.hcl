@@ -6,7 +6,7 @@ template {
 }
 
 template {
-  contents = "{{ key \"amavis/user_prefs\" }}"
+  contents = "{{ keyOrDefault \"amavis/user_prefs\" \"#\" }}"
   destination = "/etc/mail/spamassassin/user_prefs"
 }
 
