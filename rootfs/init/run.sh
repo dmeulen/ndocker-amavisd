@@ -5,10 +5,13 @@ patch /usr/sbin/amavisd /etc/ndocker/clean_stdout_log.patch
 sa-update -v
 
 busybox syslogd -n -O /dev/stdout &
-bbchild=$!
+bb_pid=$!
+
+crond -f &
+cron_pid=$!
 
 consul-template -config /etc/ndocker/amavisd.hcl &
-child=$!
+amavis_pid=$!
 
-trap "kill $bbchild $child" INT TERM
-wait $child
+trap "kill $bb_pid $cron_pid $amavis_pid" INT TERM
+wait $amavis_pid
