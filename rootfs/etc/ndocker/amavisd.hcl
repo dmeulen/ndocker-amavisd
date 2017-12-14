@@ -6,11 +6,11 @@ template {
 }
 
 template {
-  contents = "{{ keyOrDefault \"amavis/user_prefs\" \"#\" }}"
+  source = "/etc/ndocker/user_prefs.tpl"
   destination = "/etc/mail/spamassassin/user_prefs"
 }
 
 exec {
   command = "amavisd -c /etc/amavisd.conf foreground"
-  splay = "30s"
+  splay = "60s"
 }

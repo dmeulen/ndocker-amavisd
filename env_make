@@ -6,3 +6,4 @@ ENV = \
   -e AMAVIS_MYHOSTNAME=amavis.anna.lan \
   -e AMAVIS_ACL="192.168.1.191 172.17.0.0/24" \
   -e POSTFIX_RETURN="smtp:[192.168.1.191]:10025" \
+  -e CONSUL_SA_USER_PREFS="false"
