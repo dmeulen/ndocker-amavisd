@@ -54,8 +54,7 @@ $enable_dkim_signing = 1;    # load DKIM signing code, keys defined by dkim_key
 
 @local_domains_maps = ( [".$mydomain"] );  # list of all local domains
 
-@mynetworks = qw( 127.0.0.0/8 [::1] [FE80::]/10 [FEC0::]/10
-                  10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 );
+@mynetworks = qw( {{ env "AMAVIS_MYNETWORKS" }});
 
 #$unix_socketname = "/run/amavis/sock";  # amavisd-release or amavis-milter
                # option(s) -p overrides $inet_socket_port and $unix_socketname

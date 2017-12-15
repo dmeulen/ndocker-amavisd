@@ -10,8 +10,9 @@ It will read spamassassin user preferences from consul if "amavis/user_prefs" is
 # ENVIRONMENT VARIABLES
 Env var | Description | Notes
 ---|---|---
-AMAVIS_MYDOMAIN | The domain amavis is using
-AMAVIS_MYHOSTNAME | The hostname reported by amavisd
-AMAVIS_ACL | Space separated list of cidr addresses that are allowed to connect to amavis
-POSTFIX_RETURN | Method to forward back to postfix | e.g. : `"smtp:[192.168.1.100]:10025"`
-CONSUL_SA_USER_PREFS | Fetch sa user preferences from consul K/V | Set to `true` to enable.
+AMAVIS_MYDOMAIN | The domain amavis is using | default: `example.com`
+AMAVIS_MYHOSTNAME | The hostname reported by amavisd | default: `amavis.example.com`
+AMAVIS_MYNETWORKS | My local networks | e.g. : `127.0.0.0/8 [::1] [FE80::]/10 [FEC0::]/10 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16`
+AMAVIS_ACL | Space separated list of cidr addresses that are allowed to connect to amavis | default: `192.168.1.1`
+POSTFIX_RETURN | Method to forward back to postfix | default: `smtp:[192.168.1.100]:10025`
+CONSUL_SA_USER_PREFS | Fetch sa user preferences from consul K/V | default: `false`
