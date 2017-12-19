@@ -8,6 +8,12 @@ export AMAVIS_ACL="${AMAVIS_ACL:=192.168.1.1}"
 export POSTFIX_RETURN="${POSTFIX_RETURN:=smtp:[192.168.1.100]:10025}"
 export CONSUL_SA_USER_PREFS="${CONSUL_SA_USER_PREFS:=false}"
 
+if test $AMAVIS_LOCAL_DOMAINS; then
+  export LOCAL_DOMAINS=",$AMAVIS_LOCAL_DOMAINS"
+else
+  export LOCAL_DOMAINS=""
+fi
+
 patch /usr/sbin/amavisd /etc/ndocker/clean_stdout_log.patch
 
 sa-update -v

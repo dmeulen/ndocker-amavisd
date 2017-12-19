@@ -52,7 +52,7 @@ $nanny_details_level = 2;    # nanny verbosity: 1: traditional, 2: detailed
 $enable_dkim_verification = 1;  # enable DKIM signatures verification
 $enable_dkim_signing = 1;    # load DKIM signing code, keys defined by dkim_key
 
-@local_domains_maps = ( [".$mydomain"] );  # list of all local domains
+@local_domains_maps = ( [".$mydomain"{{ env "LOCAL_DOMAINS" }}] );  # list of all local domains
 
 @mynetworks = qw( {{ env "AMAVIS_MYNETWORKS" }});
 
