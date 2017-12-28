@@ -165,7 +165,7 @@ $forward_method = '{{ env "POSTFIX_RETURN" }}';  # set to undef with milter!
 # $final_banned_destiny     = D_DISCARD;
 $final_spam_destiny       = D_PASS;  #!!!  D_DISCARD / D_REJECT
 $final_bad_header_destiny = D_PASS;
-# $bad_header_quarantine_method = undef;
+$bad_header_quarantine_method = undef;
 
 # $os_fingerprint_method = 'p0f:*:2345';  # to query p0f-analyzer.pl
 
