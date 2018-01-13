@@ -6,8 +6,8 @@ template {
 }
 
 template {
-  source = "/etc/ndocker/user_prefs.tpl"
-  destination = "/etc/mail/spamassassin/user_prefs"
+  source = "/etc/ndocker/local.tpl"
+  destination = "/etc/mail/spamassassin/local.cf"
 }
 
 exec {
